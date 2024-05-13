@@ -1,9 +1,9 @@
-# Hill Climbing
+# Beam Search
 
 ## Introduction to Hill Climbing
-Hill climbing algorithm (steepest ascent) is a local search algorithm which continuously moves in the direction of increasing elevation/value to find the peak of the mountain or best solution to the problem. It terminates when it reaches a peak value where no neighbor has a higher value.
-It is also called greedy local search as it only looks to its good immediate neighbor state and not beyond that.The algorithm does not maintain a search tree, so the data structure for the current node need only record the state and the value of the objective function.
-
+The local beam search algorithm keeps track of **k states** rather than just one like in Hill Climbing. It begins with **k randomly generated states**. At each step, all the successors of all k states are generated. If any one is a goal, the algorithm halts. Otherwise, it selects the k best successors from the complete list and repeats.
+In beam search, useful information is passed among the parallel search threads, and the algorithm starts looking at states where there is a higher chance of reaching the goal state.
+The main algorithm is similar to Hill Climbing, but now the successors are generated for k states and the best k successors are chosen to continue the search.
 
 ### N Queens Example
 
@@ -16,40 +16,19 @@ It is also called greedy local search as it only looks to its good immediate nei
 * The aim of the algorithm is to minimize the heuristic cost function h, which is 0 when the state is a solution to the problem.
 
 ### Algorithm Steps
-1. **Initialization:** Start with a random state.
-2. **Successor Generation:** Generate all possible successor states by moving a single queen to another square in the same column.
-3. **Selection:** Choose the best successor state with the lowest heuristic cost.
-4. **Termination:** If the selected state is the goal state (h = 0), terminate the algorithm; otherwise, repeat steps 2-3.
+1. **Initialization:** Start with k random states.
+2. **Successor Generation:** Generate all possible successor states by moving a single queen to another square in the same column for all k states.
+3. **Selection:** Choose the best k successor states with the lowest heuristic costs.
+4. **Termination:** If one of the selected states is the goal state (h = 0), terminate the algorithm; otherwise, repeat steps 2-3.
 
-**Tie Breaking**: Hill-climbing algorithms typically choose randomly among the set of best successors if there is more than one.
+**Tie Breaking**: Beam Search algorithms typically choose randomly among the set of best successors if there is more than one.
 
 
 ### Disadvantages
-Though Basic Hill Climbing reaches a soluion quickly, it can often get stuck due to the following reasons:
-1. **Local Optima**: It may get stuck at a local optima and not reach the global optima. A local maximum is a peak that is higher than each of its neighboring states but lower than the global maximum. Hill-climbing algorithms that reach the
-vicinity of a local maximum will be drawn upward toward the peak but will then be stuck with nowhere else to go.
-2. **Ridges**: Ridges result in a sequence of local maxima
-that is very difficult for greedy algorithms to navigate.
-3. **Plateaux**: It can be a flat local maximum, from which no uphill exit exists, or a **shoulder**, from which progress is possible. A hill-climbing search might get lost on the plateau.
+Local beam search can suffer from a lack of diversity among the k states—they can quickly become concentrated in a small region of the state space, making the search little more than an expensive version of hill climbing.
 
-
-![Hill](./images/hill.png)
-
-**Sideways Move**: Basic Hill Climbing stops if it reaches a plateau where the best successor has the same value as the current state. A **sideways move** does not terminate in this case in the hope that the plateau is really a shoulder and a better state can be reached after more steos. This could however lead to an infinite loop.
-
-
-## Hill Climbing Variants
-Other variants of Hill Climbing have been developed to overcome these limitations, such as:
-
-1. **Stochastic Hill Climbing**: The algorithm chooses at random from among the uphill moves; the probability of selection can vary with the steepness of the uphill move. This usually converges more slowly than steepest ascent, but in some
-state landscapes, it finds better solutions.
-2. **First-choice Hill Climbing**: First-choice hill climbing implements  stochastic hill climbing by generating successors randomly until one is generated that is better than the current state. This is a good strategy when a state has many (e.g., thousands) of successors.
-3. **Random-Restart Hill Climbing**: It conducts a series of hill-climbing searches from randomly generated initial states until a goal is found.If each hill-climbing search has a probability p of success, then the expected number of restarts required is 1/p. 
-
-### Convergence and Optimality
-
-As explained above, Hill Climbing can converge to a local maxima instead of a global maxima. Numerous strategies have been developed to address this.
-
+### Beam Search Variants
+1. **Stochastic Beam Search**: Instead of choosing the best k from the the pool of candidate successors, stochastic beam search chooses k successors at random, with the probability of choosing a given successor being an increasing function of its value.
 
 ## Pseudo Code
 
