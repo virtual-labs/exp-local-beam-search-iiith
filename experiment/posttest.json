@@ -2,106 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the primary advantage of hill climbing?",
+      "question": "What is a disadvantage of beam search?",
       "answers": {
-        "a": "They always find the global optimum",
-        "b": "They can solve any optimisation problem efficiently",
-        "c": "They are easy to implement and requrie minimal computational resources",
-        "d": "None of the above "
+        "a": "The search may not result in the optimal solution",
+        "b": "It may suffer from a lack of diversity in the search space",
+        "c": "Both a and b",
+        "d": "Neither a nor b"
       },
       "explanations": {
         "a": "",
         "b": "",
-        "c": "Hill climbing is a simple optimization algorithm that is easy to implement and understand.",
+        "c": "Beam search may not find the optimal solution and may suffer from a lack of diversity in the search space.",
         "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "In hill climbing, what does the term plateau refer to?",
+      "question": "In a beam search algorithm with a beam width of 3, how many paths will be explored at each iteration?",
       "answers": {
-        "a": "A region with constant value",
-        "b": "A region where multiple uphill directions exist",
-        "c": "A region with no uphill direction",
-        "d": "A region with no downhill direction"
-      },
-      "explanations": {
-        "a": "A plateau is a region where the value of the objective function remains constant.",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What does the term hill climbing in the steepest ascent hill climbing imply about the movement through the search space?",
-      "answers": {
-        "a": "Movement is always upwards towards higher values.",
-        "b": "Movement is always downwards towards lower values.",
-        "c": "Movement is restricted to horizontal shifts only.",
-        "d": "Movement can be in any direction"
-      },
-      "explanations": {
-        "a": "Movement in steepest ascent hill climbing is in the upward direction towards higher values.",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
-    },  
-
-    {
-      "question": "What is the main drawback of basic hill climbing algorithms?",
-      "answers": {
-        "a": "They require a more complex implementation.",
-        "b": "They often converge to a local optimum.",
-        "c": "They lack the ability to explore the search space effectively.",
-        "d": "Both (b) and (c)"
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "Number of paths does not depend on the beam width"
       },
       "explanations": {
         "a": "",
-        "b": "",
-        "c": "",
-        "d": "Hill Climbing often converges to a local optimum and may not find the global optimum."
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },  
-    {
-      "question": "Which hill climbing variant is characterized by periodically restarting the search from a random initial state?",
-      "answers": {
-        "a": "Simple Hill Climbing",
-        "b": "Steepest Ascent Hill Climbing",
-        "c": "Stochastic Hill Climbing",
-        "d": "Random Restart"
-      },
-      "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "Which term best describes the process of hill climbing?",
-      "answers": {
-        "a": "Exploring the entire search space exhaustively to find the optimal solution",
-        "b": "Incrementally improving the current solution",
-        "c": "Randomly selecting a solution from the search space",
-        "d": "None of the above"
-      },
-      "explanations": {
-        "a": "",
-        "b": "Hill climbing is an optimization algorithm that starts with a random solution and iteratively makes small changes to the solution to improve it",
+        "b": "In a beam search algorithm with a beam width of 3, 3 paths will be explored at each iteration.",
         "c": "",
         "d": ""
       },
       "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In stochastic beam search, what does the term stochastic refer to?",
+      "answers": {
+        "a": "The use of randomization in selecting paths for exploration",
+        "b": "The deterministic nature of the search algorithm",
+        "c": "The focus on exploring a single path at a time",
+        "d": "The exploration of all possible paths exhaustively"
+      },
+      "explanations": {
+        "a": "Stochastic beam search uses randomization in selecting paths for exploration.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },  
+    {
+      "question": "Which term best describes the process of beam search?",
+      "answers": {
+        "a": "Exploring the entire search space exhaustively to find the optimal solution",
+        "b": "Selecting multiple paths for exploration in parallel and prioritizing based on certain criteria",
+        "c": "Randomly selecting a solution from the search space",
+        "d": "Iteratively improving the current solution"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Beam search involves selecting multiple paths for exploration in parallel and prioritizing based on certain criteria, such as heuristic evaluation or cost.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },   
+    {
+      "question": "What is a key advantage of using beam search?",
+      "answers": {
+        "a": "Beam search guarantees finding the optimal solution",
+        "b": "Beam search is more memory-efficient",
+        "c": "Beam search can explore multiple paths simultaneously",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "Beam search's ability to explore multiple paths simultaneously is a key advantage over depth-first search, which explores a single path exhaustively before backtracking.",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How does the choice of beam width impact the trade-off between exploration and exploitation in beam search?",
+      "answers": {
+        "a": "Increasing the beam width increases exploration but reduces exploitation",
+        "b": "Increasing the beam width increases both exploration and exploitation",
+        "c": "Decreasing the beam width increases exploration but reduces exploitation",
+        "d": "Decreasing the beam width increases both exploration and exploitation"
+      },
+      "explanations": {
+        "a": "Increasing the beam width allows for more exploration of the search space but may reduce the depth of exploration and exploitation of promising paths.",
+        "b": "",
+        "c": "",
+        "d": "."
+      },
+      "correctAnswer": "a",
       "difficulty": "advanced"
     }
     
