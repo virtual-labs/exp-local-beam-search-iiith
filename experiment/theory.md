@@ -1,6 +1,6 @@
 # Beam Search
 
-## Introduction to Hill Climbing
+## Introduction to Local Beam Search
 The local beam search algorithm keeps track of **k states** rather than just one like in Hill Climbing. It begins with **k randomly generated states**. At each step, all the successors of all k states are generated. If any one is a goal, the algorithm halts. Otherwise, it selects the k best successors from the complete list and repeats.
 In beam search, useful information is passed among the parallel search threads, and the algorithm starts looking at states where there is a higher chance of reaching the goal state.
 The main algorithm is similar to Hill Climbing, but now the successors are generated for k states and the best k successors are chosen to continue the search.
