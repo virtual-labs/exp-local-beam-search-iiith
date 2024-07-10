@@ -38,10 +38,10 @@ function refresh() {
                 refreshIntervalId = setInterval(() => {
                     if(!isQuestion){
                         if (next_count == 0) {
-                            agent.nextMove(svgChessboard);
+                            agent.nextMove();
                             next_count = 1; 
                         } else {
-                            agent.QueenMove(svgChessboard);
+                            agent.QueenMove();
                             next_count = 0;
                         }}
                 }, 1000*input.value)
