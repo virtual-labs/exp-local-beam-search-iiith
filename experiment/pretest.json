@@ -70,7 +70,7 @@
         "difficulty": "intermediate"
       },
       {
-        "question": "In beam search, the beadth determines",
+        "question": "In beam search, the beam width determines",
         "answers": {
           "a": "The maximum depth of the search tree",
           "b": "The probability of selecting a given path for exploration.",

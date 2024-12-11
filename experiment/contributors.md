@@ -7,4 +7,4 @@
 ### Developers
 | SNo. | Name        | Email                        | Institute                                          | ID  |
 |------|-------------|------------------------------|-----------------------------------------------------|-----|
-| 1    | Maanasa Kovuru | maanasa.kovuru@students.iiit.ac.in  | International Institute of Information Technology Hyderabad | 1   |
+| 1    | Maanasa Kovuru | maanasa.kovuru@students.iiit.ac.in  | International Institute of Information Technology Hyderabad |    |
