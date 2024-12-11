@@ -78,6 +78,15 @@ class NQueens {
                 square.setAttribute('fill', (x + y) % 2 === 0 ? '#eeeeee' : '#5b5b5b');
 
                 svgElement.appendChild(square);
+
+                svgElement.appendChild(square);
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', x * squareSize + 5);
+                text.setAttribute('y', y * squareSize + 10);
+                text.setAttribute('font-size', '8px');
+                text.setAttribute('fill', (x + y) % 2 === 0 ? '#5b5b5b' : '#eeeeee');
+                text.textContent = `(${y},${x})`;
+                svgElement.appendChild(text);
             }
         }
 

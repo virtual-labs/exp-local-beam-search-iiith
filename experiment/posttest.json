@@ -53,37 +53,37 @@
       "difficulty": "intermediate"
     },  
     {
-      "question": "Which term best describes the process of beam search?",
+      "question": "How does local beam search handle ties when selecting the top-k states?",
       "answers": {
-        "a": "Exploring the entire search space exhaustively to find the optimal solution",
-        "b": "Selecting multiple paths for exploration in parallel and prioritizing based on certain criteria",
-        "c": "Randomly selecting a solution from the search space",
-        "d": "Iteratively improving the current solution"
+        "a": "It chooses randomly among the tied states",
+        "b": "It selects states based on their depth in the search tree",
+        "c": "It uses an additional heuristic to break ties",
+        "d": "It always selects the first k states"
       },
       "explanations": {
-        "a": "",
-        "b": "Beam search involves selecting multiple paths for exploration in parallel and prioritizing based on certain criteria, such as heuristic evaluation or cost.",
+        "a": "Beam Search algorithms typically choose randomly among the set of best successors if there are more than k.",
+        "b": "",
         "c": "",
         "d": ""
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "intermediate"
     },   
     {
-      "question": "What is a key advantage of using beam search?",
+      "question": "What happens if the beam width is too large relative to the size of the search space?",
       "answers": {
-        "a": "Beam search guarantees finding the optimal solution",
-        "b": "Beam search is more memory-efficient",
-        "c": "Beam search can explore multiple paths simultaneously",
-        "d": "All of the above"
+        "a": "The algorithm performs exhaustive search",
+        "b": "The algorithm degenerates into random search",
+        "c": "The algorithm skips important paths",
+        "d": "The algorithm terminates prematurely"
       },
       "explanations": {
-        "a": "",
+        "a": "A very large beam width causes the algorithm to expand most or all nodes, resembling exhaustive search.",
         "b": "",
-        "c": "Beam search's ability to explore multiple paths simultaneously is a key advantage over depth-first search, which explores a single path exhaustively before backtracking.",
+        "c": "",
         "d": ""
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "advanced"
     },
     {
