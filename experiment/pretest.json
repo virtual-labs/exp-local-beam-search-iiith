@@ -1,39 +1,107 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "Local beam search with k = 1 is an example of?",
+        "answers": {
+          "a": "Markov Decision Process",
+          "b": "Local Hill Climbing",
+          "c": "Genetic algorithm",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "",
+          "b": "Local beam search with k = 1 is an example of Local Hill Climbing.",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "What is the primary advantage of local beam search?",
+        "answers": {
+          "a": "It can explore multiple paths simultaneously",
+          "b": "It is always guaranteed to find the optimal solution",
+          "c": "It ensures exhaustive exploration of the search space",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "Local beam search can explore multiple paths simultaneously because of the beam width",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "question": "Which of the following statements is true about Local Beam Search? \\ Statement 1: Local Beam Search explores a single path at a time. \\ Statement 2: Local Beam Search is a memory-intensive search algorithm.",
+        "answers": {
+          "a": "only 1",
+          "b": "only 2",
+          "c": "1 and 2",
+          "d": "neither 1 and 2"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "Local Beam Search explores multiple paths simultaneously and is not memory-intensive."
+        },
+        "correctAnswer": "d",
+        "difficulty": "intermediate"
+      },  
+      {
+        "question": "Which of the following best describes local beam search?",
+        "answers": {
+          "a": "A search algorithm that expands all possible paths simultaneously",
+          "b": "A search algorithm that focuses on a single path at a time",
+          "c": "A search algorithm that selects multiple paths to explore in parallel",
+          "d": "None"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "Local beam search selects multiple paths to explore in parallel, with the hope that one of them will lead to the goal.",
+          "d": ""
+        },
+        "correctAnswer": "c",
+        "difficulty": "intermediate"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "In beam search, the beam width determines",
+        "answers": {
+          "a": "The maximum depth of the search tree",
+          "b": "The probability of selecting a given path for exploration.",
+          "c": "The heuristic evaluation function",
+          "d": "The number of paths selected for exploration at each iteration"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "The beam width determines the number of paths selected for exploration at each iteration."
+        },
+        "correctAnswer": "d",
+        "difficulty": "advanced"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+      {
+        "question": "What is a potential drawback of using a narrow beam width in beam search?",
+        "answers": {
+          "a": "Higher computational cost",
+          "b": "Increased memory usage",
+          "c": "Limited exploration of the search space",
+          "d": "None"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "With a narrow beam width, the search may not explore a wide enough range of paths, potentially missing the optimal solution.",
+          "d": ""
+        },
+        "correctAnswer": "c",
+        "difficulty": "advanced"
+      }
+    ]
+  }

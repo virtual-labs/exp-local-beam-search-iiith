@@ -2,38 +2,107 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is a disadvantage of beam search?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The search may not result in the optimal solution",
+        "b": "It may suffer from a lack of diversity in the search space",
+        "c": "Both a and b",
+        "d": "Neither a nor b"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "Beam search may not find the optimal solution and may suffer from a lack of diversity in the search space.",
+        "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "In a beam search algorithm with a beam width of 3, how many paths will be explored at each iteration?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "Number of paths does not depend on the beam width"
+      },
+      "explanations": {
+        "a": "",
+        "b": "In a beam search algorithm with a beam width of 3, 3 paths will be explored at each iteration.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In stochastic beam search, what does the term stochastic refer to?",
+      "answers": {
+        "a": "The use of randomization in selecting paths for exploration",
+        "b": "The deterministic nature of the search algorithm",
+        "c": "The focus on exploring a single path at a time",
+        "d": "The exploration of all possible paths exhaustively"
+      },
+      "explanations": {
+        "a": "Stochastic beam search uses randomization in selecting paths for exploration.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },  
+    {
+      "question": "How does local beam search handle ties when selecting the top-k states?",
+      "answers": {
+        "a": "It chooses randomly among the tied states",
+        "b": "It selects states based on their depth in the search tree",
+        "c": "It uses an additional heuristic to break ties",
+        "d": "It always selects the first k states"
+      },
+      "explanations": {
+        "a": "Beam Search algorithms typically choose randomly among the set of best successors if there are more than k.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },   
+    {
+      "question": "What happens if the beam width is too large relative to the size of the search space?",
+      "answers": {
+        "a": "The algorithm performs exhaustive search",
+        "b": "The algorithm degenerates into random search",
+        "c": "The algorithm skips important paths",
+        "d": "The algorithm terminates prematurely"
+      },
+      "explanations": {
+        "a": "A very large beam width causes the algorithm to expand most or all nodes, resembling exhaustive search.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How does the choice of beam width impact the trade-off between exploration and exploitation in beam search?",
+      "answers": {
+        "a": "Increasing the beam width increases exploration but reduces exploitation",
+        "b": "Increasing the beam width increases both exploration and exploitation",
+        "c": "Decreasing the beam width increases exploration but reduces exploitation",
+        "d": "Decreasing the beam width increases both exploration and exploitation"
+      },
+      "explanations": {
+        "a": "Increasing the beam width allows for more exploration of the search space but may reduce the depth of exploration and exploitation of promising paths.",
+        "b": "",
+        "c": "",
+        "d": "."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
+    
   ]
 }
